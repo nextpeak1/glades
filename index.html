@@ -71,54 +71,70 @@
         <!-- Inline Vector Graphic (SVG) -->
         <div class="artwork">
             <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
-                <!-- Reusable Tree Definition to keep code clean -->
+                <!-- Reusable Tree Definition -->
                 <defs>
                     <polygon id="tree" points="0,-15 10,15 -10,15" fill="#154c29" />
                     <polygon id="tree-small" points="0,-10 7,10 -7,10" fill="#0d331b" />
                 </defs>
 
-                <!-- White Mountain Background -->
+                <!-- White Mountain Background (Main Peak) -->
+                <!-- Peak at (200, 30), Left Base at (20, 250), Right Base at (380, 250) -->
                 <polygon points="20,250 200,30 380,250" fill="#ffffff" />
                 
                 <!-- Secondary lower peak to add depth -->
+                <!-- Peak at (80, 140), Left Base at (0, 250), Right Base at (180, 250) -->
                 <polygon points="0,250 80,140 180,250" fill="#e9ecef" />
 
-                <!-- Dense Trees Placed Across the Mountain -->
-                <!-- Upper Glades -->
-                <use href="#tree-small" x="180" y="80" />
-                <use href="#tree-small" x="210" y="95" />
-                <use href="#tree" x="160" y="110" />
-                <use href="#tree-small" x="240" y="120" />
-                
-                <!-- Mid Glades -->
-                <use href="#tree" x="130" y="150" />
-                <use href="#tree" x="150" y="165" />
-                <use href="#tree-small" x="200" y="140" />
-                <use href="#tree" x="230" y="170" />
-                <use href="#tree" x="260" y="155" />
-                <use href="#tree-small" x="280" y="180" />
-
-                <!-- Lower Dense Trees -->
-                <use href="#tree" x="80" y="210" />
-                <use href="#tree" x="100" y="190" />
-                <use href="#tree" x="115" y="230" />
-                <use href="#tree" x="145" y="200" />
-                <use href="#tree" x="175" y="220" />
-                <use href="#tree" x="220" y="210" />
-                <use href="#tree" x="245" y="235" />
-                <use href="#tree" x="275" y="205" />
-                <use href="#tree" x="300" y="225" />
-                <use href="#tree" x="330" y="240" />
-                <use href="#tree" x="60" y="240" />
-
-                <!-- Ski Tracks (Dotted Black Line) Winding Down -->
-                <!-- Drawn after the trees so it overlaps them slightly where needed -->
-                <path d="M 200,30 C 240,80 130,130 190,180 S 130,220 180,250" 
+                <!-- Ski Tracks (Dotted Black Line) -->
+                <!-- Placed before the trees and weaving precisely through the empty gaps -->
+                <path d="M 200,30 
+                         C 190,60 160,80 160,110 
+                         C 160,140 230,150 230,190 
+                         C 230,220 190,220 190,250" 
                       fill="none" 
                       stroke="#000000" 
                       stroke-width="3" 
                       stroke-linecap="round" 
                       stroke-dasharray="6,8" />
+
+                <!-- Carefully Mapped Dense Trees (Inside Mountain Bounds & Avoiding Track) -->
+                
+                <!-- High altitude (Peak area) -->
+                <use href="#tree-small" x="200" y="75" />
+                <use href="#tree-small" x="220" y="85" />
+                
+                <!-- Upper-Mid section -->
+                <use href="#tree-small" x="140" y="110" />
+                <use href="#tree" x="185" y="115" />
+                <use href="#tree" x="210" y="105" />
+                <use href="#tree-small" x="240" y="120" />
+                
+                <!-- Mid section -->
+                <use href="#tree-small" x="80" y="150" /> <!-- On secondary peak -->
+                <use href="#tree" x="115" y="150" />
+                <use href="#tree" x="140" y="140" />
+                <use href="#tree" x="170" y="155" />
+                <use href="#tree" x="230" y="145" />
+                <use href="#tree" x="260" y="160" />
+                
+                <!-- Lower-Mid section -->
+                <use href="#tree" x="90" y="180" />
+                <use href="#tree-small" x="120" y="190" />
+                <use href="#tree" x="160" y="185" />
+                <use href="#tree" x="195" y="195" />
+                <use href="#tree" x="265" y="190" />
+                <use href="#tree-small" x="300" y="185" />
+                
+                <!-- Bottom section -->
+                <use href="#tree-small" x="40" y="225" />
+                <use href="#tree" x="65" y="240" />
+                <use href="#tree" x="100" y="220" />
+                <use href="#tree" x="135" y="235" />
+                <use href="#tree" x="165" y="240" />
+                <use href="#tree" x="225" y="235" />
+                <use href="#tree" x="270" y="225" />
+                <use href="#tree" x="310" y="240" />
+                <use href="#tree-small" x="345" y="230" />
             </svg>
         </div>
 
